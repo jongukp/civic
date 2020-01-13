@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": [ "civicinfo#electionsQueryResponse" ]
+    },
+    "elections": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "electionDay": {
+              "type": "string",
+              "format": "date"
+            },
+            "ocdDivisionId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "electionDay",
+            "ocdDivisionId"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "kind",
+    "elections"
+  ]
+}
